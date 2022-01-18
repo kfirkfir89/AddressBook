@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
-    <title>PageTitle</title>
+    <title>Address Book Template</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,59 +10,50 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        
+    
     <link href="/css/site.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container mt-5">
-        <h1>My Address Book</h1>
-        <div class="container border border-2 border-info shadow-lg p-2 bg-light">
-            <div class="row">
-                <div class="col-md-4 mb-1">
-                    <img class="img-fluid" src="/img/GirlOne_4x.png" alt="girlOne">
-                </div>
-                <div class="col">
-                    <form>
-                        <div class="row row-cols-1">
-                            <div class="col-md-6">
-                                <label class="form-label">First Name</label>
-                                <input type="text" name="firstName" class="form-control" aria-label="First Name" required>
+<body class="h-100">
+       <div class="container mt-5">
+        <h2>Address Book</h2>
+           <div class="p-3 border border-2 shadow-lg bg-light">
+               <form class="row g-3 p-2">
+                   <div class="col-12 col-md-4">
+                       <img class="img-fluid" src="/img/GirlOne_4x.png">
+                   </div>
+                   <div class="col-12 col-md-8">
+                       <div class="row">
+                            <div class="col-12 col-md-6">
+                                <label for="inputFirstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="inputFirstName">
                             </div>
-                             <div class="col-md-6">
-                                 <label class="form-label">Last Name</label>
-                                 <input type="text" name="lastName" class="form-control" aria-label="Last Name" required>
-                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label class="form-label">Email</label>
-                                <input type="email" name="email" class="form-control" aria-label="Email" required>
+                            <div class="col-12 col-md-6">
+                                <label for="inputLastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="inputLastName">    
                             </div>
-                             <div class="col">
-                                 <label class="form-label">Phone</label>
-                                 <input type="tel" name="phone" class="form-control" aria-label="Phone" required>
-                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label class="form-label">Address</label>
-                                <input type="text" name="address" class="form-control" placeholder="1234 Main St" aria-label="Address">
+                            <div class="col-12 col-md-6">
+                                <label for="inputEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail"> 
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label class="form-label">Address 2</label>
-                                <input type="text" name="address2" class="form-control" placeholder="Apartment, studio, or floor" aria-label="Address2">
+                            <div class="col-12 col-md-6">
+                                <label for="inputPhone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="inputPhone"> 
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label class="form-label">City</label>
-                                <input type="text" name="city" class="form-control" aria-label="City">
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control" placeholder="1234 Main St" id="inputAddress">
                             </div>
-                            <div class="col-md-4">
-                                <label class="form-label">State</label>
+                            <div class="col-12">
+                                <label for="inputAddress2" class="form-label">Address2</label>
+                                <input type="text" class="form-control" placeholder="Apartment, studio, or floor" id="inputAddress2">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="inputCity" class="form-label">City</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label  for="inputState" class="form-label">State</label>
                                 <select id="inputState" class="form-select">
                                     <option selected>Choose...</option>
                                     <option value="AL">Alabama</option>
@@ -117,26 +108,24 @@
                                     <option value="WY">Wyoming</option>
                                 </select>
                             </div>
-                            <div class="col-md-2">
-                                <label class="form-label">Zip</label>
-                                <input type="text" name="zip" class="form-control" aria-label="Zip">
+                            <div class="col-12 col-md-2">
+                                <label for="inputZip" class="form-label">Zip</label>
+                                <input type="text" class="form-control" id="inputZip">
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label class="form-check-label">Family</label>
-                                <input type="checkbox" name="family" class="form-check-input" aria-label="Family">
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkFamily">
+                                    <label class="form-check-label" for="checkFamily">Family</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="d-flex flex-row-reverse">
-                            <button type="submit" class="btn btn-primary">Save</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        
-    </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                       </div>
+                   </div>
+               </form>
+           </div>
+       </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
